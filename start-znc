@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ZNC_USER=${ZNC_USER:-'paulczar1'}
-ZNC_PASS=${ZNC_PASS:-'password'}
+ZNC_USER=${ZNC_USER:-$(tr -dc "[:alpha:]" < /dev/urandom | head -c 8)}
+ZNC_PASS=${ZNC_PASS:-$(tr -dc "[:alpha:]" < /dev/urandom | head -c 8)}
 IRC_SERVER=${IRC_SERVER:-'irc.freenode.net'}
 IRC_PORT=${IRC_PORT:-'6667'}
 

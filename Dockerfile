@@ -16,6 +16,9 @@ ADD znc.conf /opt/znc/configs/znc.conf
 
 RUN chmod +x /usr/local/bin/start-znc 
 
+RUN useradd znc
+RUN chown -R znc:znc /opt/znc
+
 EXPOSE 6667
 
 # Start znc
